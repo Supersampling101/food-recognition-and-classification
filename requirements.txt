@@ -4,7 +4,9 @@ clarifai-grpc==9.3.0
 googleapis-common-protos==1.59.0
 grpcio==1.54.0
 idna==3.4
+Pillow==9.5.0
 protobuf==4.22.3
+pyparsing==3.0.9
 python-dotenv==1.0.0
 requests==2.29.0
 urllib3==1.26.15

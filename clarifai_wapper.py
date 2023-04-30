@@ -5,6 +5,12 @@ import json
 import requests
 import base64
 
+# ClarifaiApi class for the food recognition clarifai api calls // wrapper class
+# The Clarifai pretrained food model gives lits of items on the image
+# Does not suffice for some deep estimations, may be used in some cases tho.
+
+# Use cases : cheaper item list from image and this can be pushed to some recepie API 
+# to suggest recepies etc..
 
 class ClarifaiApi:
     def __init__(self, api_key,
@@ -129,6 +135,7 @@ class ClarifaiApi:
 def main():
     # load api key from .env file
     from dotenv import load_dotenv
+    import os
     load_dotenv()
     api_key=os.getenv("CLARIFAI_API_KEY")
 

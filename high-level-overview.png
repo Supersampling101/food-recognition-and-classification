@@ -1,0 +1,16 @@
+// High-Level Overview of the App
+digraph {
+	Dexcom [label="Dexcom G6 Glucose"]
+	iPhone [label=iPhone]
+	Nightscout [label=Nightscout]
+	InsulinBuddy [label=InsulinBuddy]
+	Model [label="Build personalized trained model
+(image recognition, carbs and calories)
+
+Model returns prediction on how much insulin to take"]
+	Dexcom -> iPhone [label=uploads]
+	iPhone -> Nightscout [label=uploads]
+	Nightscout -> InsulinBuddy [label="API connection"]
+	Model -> InsulinBuddy
+	Dexcom -> Model [label=uploads dir=both]
+}
